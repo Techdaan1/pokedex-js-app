@@ -10,9 +10,18 @@ let pokemonList = [
     types: 'fire',
 },
 {
-    name: 'squirtle',
+    name: 'Squirtle',
     height: 0.5,
     types: 'water',
 },
 ];
+
+for (let i = 0 ; i < pokemonList.length ; i++){
+    if (pokemonList[i].height < 6)
+    {document.write(pokemonList[i].name + ' height: ' + pokemonList[i].height + " -That is small!</br>")}
+    else
+    {document.write(pokemonList[i].name + ' height: ' + pokemonList[i].height + " - That is big!</br>")};
+}
+
+
 
