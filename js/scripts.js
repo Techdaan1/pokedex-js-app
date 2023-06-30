@@ -16,12 +16,12 @@ let pokemonList = [
 },
 ];
 
-for (let i = 0 ; i < pokemonList.length ; i++){
-    if (pokemonList[i].height < 6)
-    {document.write(pokemonList[i].name + ' height: ' + pokemonList[i].height + " -That is small!</br>")}
-    else
-    {document.write(pokemonList[i].name + ' height: ' + pokemonList[i].height + " - That is big!</br>")};
-}
+function printArrayDetails(){
+pokemonList.forEach(function(pokemon){
+        if (pokemon.height < 6)
+        {document.write(pokemon.name + ' height: ' + pokemon.height + " -That is small!</br>")}
+        else
+        {document.write(pokemon.name + ' height: ' + pokemon.height + " - That is big!</br>")};
+})}
 
-
-
+printArrayDetails();
