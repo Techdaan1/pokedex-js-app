@@ -1,3 +1,4 @@
+let pokemonRepository = (function(){
 let pokemonList = [
     {
     name: 'Balbasaur',
@@ -16,8 +17,23 @@ let pokemonList = [
 },
 ];
 
+function getAll(){
+    return pokemonList;
+}
+
+function add(pokemon){
+    return pokemonList.push(pokemon);
+}
+
+return {
+    getAll: getAll,
+    add: add,
+}
+
+})();
+
 function printArrayDetails(){
-pokemonList.forEach(function(pokemon){
+pokemonRepository.getAll().forEach(function(pokemon){
         if (pokemon.height < 6)
         {document.write(pokemon.name + ' height: ' + pokemon.height + " -That is small!</br>")}
         else
